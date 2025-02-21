@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    *{
+        font-size: 24px;
+       color: #e2deb7
+    }
+    span{
+        font-weight: bold;
+       color: rgb(170, 163, 86);
+       font-size: 30
+    }
+form{
+    display: flex;
+justify-content: left;
+width: 30%;
+    height: 550px;
+    background-color: rgba(77, 7, 77, 0.5);
+    border-radius: 20px
+    }
+#para{
+display: flex;
+justify-content: right;
+width: 30%;
+    height: 300px;
+    background-color: rgba(77, 7, 77, 0.5);
+    margin-left: 700px;
+    align-items: flex-start;
+    margin-top: -400px;
+    border-radius: 20px;
+}
+body{
+    background-color: rgba(21, 2, 37, 0.383)
+}
+fieldset{
+    height: 520px;
+width: 500px;
+border-radius: 20px;
+
+}
+button{
+    background-color: rgb(49, 6, 54);
+    color: whitesmoke;
+    border: 3px groove peru;
+    border-radius: 10px;
+    padding: 10px;
+}
+input{
+    background-color: rgb(49, 6, 54);
+    color: rgb(226, 222, 183)
+
+}
+select{
+    background-color: rgb(49, 6, 54);
+    color: rgb(226, 222, 183)  
+}
+</style>
+<body>
+    <form action="#" id="form">
+    <fieldset>
+        <legend>Registration form</legend>
+        <label for="name">Name</label><br>
+        <input type="text" id="name">
+        <br>
+        <label for="lname">Last name</label><br>
+        <input type="text" id="lname">
+        <br>
+        <label for="age">Age</label><br>
+        <input type="number" id="age">
+        <br>
+        <label for="phone number">Phone number</label><br>
+        <input type="number" id="phone">
+        <br>
+        <label for="education">Education</label><br>
+        <select name="education" id="education">
+            <option value="12">12class</option>
+            <option value="14">14class</option>
+            <option value="16">Master</option>
+            <option value="20">PHD</option>
+        </select> <br>
+        <label for="date">Date of birth</label><br>
+        <input type="date" id="date">
+        <br>
+        <label for="email">Email</label><br>
+        <input type="email" id="email">
+        <br>
+      <button id="btn">Submit</button>
+    </fieldset>
+</form>
+<div id="para">
+    <p>My name i <span id="s1">....</span>my last name is <span id="s2">....</span>
+        I am <span id="s3">....</span> years old .My DOB is on<span id="s4">....</span>
+    I have <span id="s5">....</span>certificate.My phone number is <span id="s6">....</span>
+    and my Email address is <span id="s7">....</span>these was informations about me.
+    </p>
+</div>
+
+<script>
+let name=document.getElementById("name");
+let lname=document.getElementById("lname");
+let age=document.getElementById("age");
+let phone=document.getElementById("phone");
+let education=document.getElementById("education");
+let date=document.getElementById("date");
+let email=document.getElementById("email");
+
+function result(){
+let s1=document.getElementById("s1");
+let s2=document.getElementById("s2");
+let s3=document.getElementById("s3");
+let s4=document.getElementById("s4");
+let s5=document.getElementById("s5");
+let s6=document.getElementById("s6");
+let s7=document.getElementById("s7");
+
+s1.textContent=name.value;
+s2.textContent=lname.value;
+s3.textContent=age.value;
+s4.textContent=phone.value;
+s5.textContent=education.value;
+s6.textContent=date.value;
+s7.textContent=email.value;
+}
+document.getElementById("btn"). addEventListener ("click",result);
+
+
+
+</script>
+
+
+</body>
+</html>
